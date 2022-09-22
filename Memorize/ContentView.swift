@@ -2,14 +2,14 @@
 //  ContentView.swift
 //  Memorize
 //
-//  Created by mac on 25/08/2021.
+//  Created by Li Tang on 25/08/2021.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var emojis: Array<String> = ["🚂", "🚀", "🚁", "🚜", "🚗", "🚕", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚒", "🚐", "🛻", "🚚", "🚛"]
-    @State var emojiCount = 6
+    @State var emojiCount = 12
     
     var body: some View {
         VStack {
@@ -21,47 +21,47 @@ struct ContentView: View {
                 }
             }
             .foregroundColor(.red)
-            Spacer()
-            HStack{
-                remove
-                Spacer()
-                add
-            }
-            .font(.largeTitle)
-            .padding(.horizontal)
-            
+//            Spacer()
+//            HStack{
+//                remove
+//                Spacer()
+//                add
+//            }
+//            .font(.largeTitle)
+//            .padding(.horizontal)
+//
         }
         .padding(.horizontal)
     }
     
-    var remove: some View {
-        Button(action: {
-            if emojiCount > 0 {
-                emojiCount -= 1
-            }
-        }, label: {
-            Image(systemName: "minus.circle")
-        })
-    }
-    
-    var add: some View {
-        Button(action: {
-            if emojiCount < emojis.count {
-                emojiCount += 1
-            }
-        }, label: {
-            Image(systemName: "plus.circle")
-        })
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .preferredColorScheme(.dark)
-        ContentView()
-            .preferredColorScheme(.light)
-    }
+//    var remove: some View {
+//        Button(action: {
+//            if emojiCount > 0 {
+//                emojiCount -= 1
+//            }
+//        }, label: {
+//            Image(systemName: "minus.circle")
+//        })
+//    }
+//
+//    var add: some View {
+//        Button(action: {
+//            if emojiCount < emojis.count {
+//                emojiCount += 1
+//            }
+//        }, label: {
+//            Image(systemName: "plus.circle")
+//        })
+//    }
+//}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//            .preferredColorScheme(.dark)
+//        ContentView()
+//            .preferredColorScheme(.light)
+//    }
 }
 
 struct CardView: View {
